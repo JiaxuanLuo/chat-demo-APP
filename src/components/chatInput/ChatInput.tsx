@@ -263,6 +263,14 @@ const Input = ({ sessionId }: { sessionId: string | null }) => {
               options={modelOptions}
               placeholder={t('providerCurrentModel')}
               ariaLabel={t('providerCurrentModel')}
+              // 移动端只显示模型名，把宽度留给思考/搜索和语音按钮
+              displayValue={
+                isMobile
+                  ? model
+                  : activeProvider
+                    ? `${activeProvider.name} · ${model}`
+                    : undefined
+              }
               onChange={(value) => {
                 const separator = value.indexOf('\u0001')
                 if (separator === -1) {

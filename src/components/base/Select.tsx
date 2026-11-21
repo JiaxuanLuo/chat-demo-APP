@@ -19,6 +19,7 @@ export const Select = <T extends string>({
   ariaLabel,
   className,
   disabled = false,
+  displayValue,
 }: {
   value: T
   options: SelectOption<T>[]
@@ -27,6 +28,8 @@ export const Select = <T extends string>({
   ariaLabel?: string
   className?: string
   disabled?: boolean
+  /** 触发器上显示的短文本；不传时使用选中项的 label */
+  displayValue?: string
 }) => {
   const [open, setOpen] = useState(false)
   const current = options.find((option) => option.value === value)
@@ -51,7 +54,7 @@ export const Select = <T extends string>({
         onClick={() => setOpen((value) => !value)}
       >
         {current ? (
-          <span lang={current.lang}>{current.label}</span>
+          <span lang={current.lang}>{displayValue ?? current.label}</span>
         ) : (
           <span className={styles.placeholder}>{placeholder}</span>
         )}

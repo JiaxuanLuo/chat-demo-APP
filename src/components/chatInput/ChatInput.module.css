@@ -254,9 +254,9 @@
 /* 模型选择：与深度思考开关同高的胶囊，窄屏时优先压缩文字 */
 .modelPickerWrap {
   display: flex;
-  flex: 0 1 150px;
-  min-width: 92px;
-  max-width: 150px;
+  flex: 0 1 220px;
+  min-width: 0;
+  max-width: 220px;
 }
 
 .functionRow .modelPicker {
@@ -271,9 +271,24 @@
 }
 
 @media not all and (min-width: 768px) {
+  .functionRow {
+    gap: 6px;
+  }
+
   .modelPickerWrap {
-    flex-basis: 116px;
-    max-width: 116px;
+    flex-basis: 110px;
+    max-width: 110px;
+  }
+
+  .toggles {
+    /* 至少保留两个图标开关的宽度；空间不足时 JS 会先收起开关文字 */
+    min-width: 74px;
+    gap: 6px;
+  }
+
+  .functionRow .toggle {
+    /* 提高优先级，覆盖基础 .toggle 的内边距 */
+    padding: 0 10px;
   }
 }
 
