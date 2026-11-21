@@ -2,11 +2,11 @@
 
 **语言：[English](README.md) | 简体中文**
 
-**本定制版本作者：bsh**
+**本定制版本作者：DeepSeek Harness · DeepSeek V4.1 Flash**
 
 一个静态聊天示例，现在支持**添加多个 API 平台与模型**，并可以打包成**安卓 App**。浏览器或 WebView 直接请求已配置的 API 服务，不需要应用后端。
 
-项目基于 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)。本仓库的二次开发由 **bsh** 完成并维护，不是 DeepSeek 官方项目。仍然可以直接打开 `dist/index.html`，或在安卓手机上安装 `release/AI-Chat-Demo-0.2.0.apk`。预构建的网页包和安卓安装包都放在 `release/`。
+项目基于 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)。本仓库的二次开发由 **DeepSeek Harness** 与 **DeepSeek V4.1 Flash** 完成，不是 DeepSeek 官方项目。仍然可以直接打开 `dist/index.html`，或在安卓手机上安装 `release/AI-Chat-Demo-0.2.0.apk`。预构建的网页包和安卓安装包都放在 `release/`。
 
 ## 新增内容
 
@@ -163,7 +163,7 @@ scripts/               跨平台网页与安卓构建脚本
 
 ## 来源声明与致谢
 
-本仓库是 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发版本（MIT License）。基础项目及其原始代码、界面与文档的版权归 DeepSeek 所有，原始许可证保留在 [LICENSE](LICENSE)。本仓库的多平台支持、模型管理、安卓应用外壳、构建脚本、文档与发布整理由 **bsh** 完成并维护，开发过程中使用了 **DeepSeek Harness** 辅助；所有提交与发布由 bsh 审核决定。本项目不是 DeepSeek 官方项目。本仓库没有把上游项目或第三方成果声称为原创；第三方依赖遵循各自许可证。
+本仓库是 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发版本（MIT License）。基础项目及其原始代码、界面与文档的版权归 DeepSeek 所有，原始许可证保留在 [LICENSE](LICENSE)。本仓库的多平台支持、模型管理、安卓应用外壳、构建脚本、文档与发布整理由 **DeepSeek Harness** 与 **DeepSeek V4.1 Flash** 完成并维护。本项目不是 DeepSeek 官方项目。本仓库没有把上游项目或第三方成果声称为原创；第三方依赖遵循各自许可证。
 
 ## 许可证
 

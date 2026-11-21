@@ -2,11 +2,11 @@
 
 **Language: English | [简体中文](README.zh-CN.md)**
 
-**Author of this customized version: bsh**
+**Authors of this customized version: DeepSeek Harness · DeepSeek V4.1 Flash**
 
 A static chat demo that now supports **multiple API providers and models** and ships as an **Android app**. The browser or WebView talks to the configured API service directly; there is no application backend.
 
-Originally based on [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). The customization in this repository was developed and is maintained by **bsh**; it is not an official DeepSeek project. You can still open `dist/index.html` directly, or install `release/AI-Chat-Demo-0.2.0.apk` on an Android phone. Prebuilt web and Android artifacts live in `release/`.
+Originally based on [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). The customization in this repository was developed by **DeepSeek Harness** and **DeepSeek V4.1 Flash**; it is not an official DeepSeek project. You can still open `dist/index.html` directly, or install `release/AI-Chat-Demo-0.2.0.apk` on an Android phone. Prebuilt web and Android artifacts live in `release/`.
 
 ## What was added
 
@@ -163,7 +163,7 @@ scripts/               Cross-platform web and Android build scripts
 
 ## Credits and authorship
 
-This repository is a derivative of [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) (MIT License). The original project, its code, UI, and documentation are copyright DeepSeek; the original license is retained in [LICENSE](LICENSE). The multi-provider support, model management, Android app shell, build tooling, documentation, and release packaging in this repository were developed and are maintained by **bsh**, with assistance from **DeepSeek Harness**; all commits and releases were reviewed by bsh. This is not an official DeepSeek project. No upstream or third-party work is claimed as original here; third-party dependencies remain under their own licenses.
+This repository is a derivative of [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) (MIT License). The original project, its code, UI, and documentation are copyright DeepSeek; the original license is retained in [LICENSE](LICENSE). The multi-provider support, model management, Android app shell, build tooling, documentation, and release packaging in this repository were developed and are maintained by **DeepSeek Harness** and **DeepSeek V4.1 Flash**. This is not an official DeepSeek project. No upstream or third-party work is claimed as original here; third-party dependencies remain under their own licenses.
 
 ## License
 
