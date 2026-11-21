@@ -10,7 +10,9 @@ build/
 !.env.example
 tmp/
 .dev-test/
-release/
+release/*
+!release/AI-Chat-Demo-0.2.0.apk
+!release/AI-Chat-Demo-0.2.0-debug.apk
 android/.gradle/
 android/local.properties
 android/.idea/
