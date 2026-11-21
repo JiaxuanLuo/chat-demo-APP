@@ -163,7 +163,7 @@ scripts/               Cross-platform web and Android build scripts
 
 ## Credits and authorship
 
-This repository is a derivative of [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) (MIT License). The original project, its code, UI, and documentation are copyright DeepSeek; the original license is retained in [LICENSE](LICENSE). The multi-provider support, model management, Android app shell, build tooling, documentation, and release packaging in this repository were developed and are maintained by **bsh**. This is not an official DeepSeek project. No upstream or third-party work is claimed as original here; see [NOTICE.md](NOTICE.md) for full attribution and third-party licenses.
+This repository is a derivative of [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) (MIT License). The original project, its code, UI, and documentation are copyright DeepSeek; the original license is retained in [LICENSE](LICENSE). The multi-provider support, model management, Android app shell, build tooling, documentation, and release packaging in this repository were developed and are maintained by **bsh**, with assistance from **DeepSeek Harness**; all commits and releases were reviewed by bsh. This is not an official DeepSeek project. No upstream or third-party work is claimed as original here; third-party dependencies remain under their own licenses.
 
 ## License
 

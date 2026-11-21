@@ -163,7 +163,7 @@ scripts/               跨平台网页与安卓构建脚本
 
 ## 来源声明与致谢
 
-本仓库是 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发版本（MIT License）。基础项目及其原始代码、界面与文档的版权归 DeepSeek 所有，原始许可证保留在 [LICENSE](LICENSE)。本仓库的多平台支持、模型管理、安卓应用外壳、构建脚本、文档与发布整理由 **bsh** 完成并维护。本项目不是 DeepSeek 官方项目。本仓库没有把上游项目或第三方成果声称为原创；完整归属与第三方许可证见 [NOTICE.md](NOTICE.md)。
+本仓库是 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发版本（MIT License）。基础项目及其原始代码、界面与文档的版权归 DeepSeek 所有，原始许可证保留在 [LICENSE](LICENSE)。本仓库的多平台支持、模型管理、安卓应用外壳、构建脚本、文档与发布整理由 **bsh** 完成并维护，开发过程中使用了 **DeepSeek Harness** 辅助；所有提交与发布由 bsh 审核决定。本项目不是 DeepSeek 官方项目。本仓库没有把上游项目或第三方成果声称为原创；第三方依赖遵循各自许可证。
 
 ## 许可证
 
