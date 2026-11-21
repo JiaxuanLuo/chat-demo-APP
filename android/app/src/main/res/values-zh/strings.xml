@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Chat Demo</string>
+    <string name="choose_file">选择文件</string>
+    <string name="no_browser">未找到可用的浏览器</string>
+    <string name="no_file_picker">未找到文件选择器</string>
+    <string name="press_again_to_exit">再按一次退出</string>
+    <string name="export_uses_bridge">请使用设置中的导出按钮保存文件</string>
+    <string name="download_started">开始下载</string>
+    <string name="download_failed">下载失败</string>
+    <string name="save_failed">文件保存失败</string>
+    <string name="saved_to">已保存到 %1$s</string>
+</resources>

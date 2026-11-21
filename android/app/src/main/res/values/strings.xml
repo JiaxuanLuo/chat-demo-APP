@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Chat Demo</string>
+    <string name="choose_file">Choose a file</string>
+    <string name="no_browser">No browser available</string>
+    <string name="no_file_picker">No file picker available</string>
+    <string name="press_again_to_exit">Press back again to exit</string>
+    <string name="export_uses_bridge">Use the export button in Settings</string>
+    <string name="download_started">Download started</string>
+    <string name="download_failed">Download failed</string>
+    <string name="save_failed">Failed to save the file</string>
+    <string name="saved_to">Saved to %1$s</string>
+</resources>
