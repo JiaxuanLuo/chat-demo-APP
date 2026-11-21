@@ -2,7 +2,7 @@
 
 A static chat demo that now supports **multiple API providers and models** and ships as an **Android app**. The browser or WebView talks to the configured API service directly; there is no application backend.
 
-Originally based on [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). You can still open `dist/index.html` directly, or install `release/AI-Chat-Demo-0.2.0.apk` on an Android phone.
+Originally based on [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). You can still open `dist/index.html` directly, or install `release/AI-Chat-Demo-0.2.0.apk` on an Android phone. Prebuilt web and Android artifacts live in `release/`.
 
 ## What was added
 
@@ -45,7 +45,13 @@ Open http://localhost:8090. To build the static site:
 pnpm build
 ```
 
-Output goes to `dist/`. It can be served from a static host or opened as a file. When opened from `file://`, storage and cross-origin access depend on the browser and on the API service allowing that origin; the Android WebView build enables universal access explicitly.
+Output goes to `dist/`. A prebuilt offline bundle is also published in [`release/AI-Chat-Demo-Web-0.2.0.zip`](release/AI-Chat-Demo-Web-0.2.0.zip): unzip it, then open `index.html` directly or serve the folder with any static file server. It can be served from a static host or opened as a file. When opened from `file://`, storage and cross-origin access depend on the browser and on the API service allowing that origin; the Android WebView build enables universal access explicitly.
+
+Build the offline bundle yourself with:
+
+```sh
+pnpm release:web
+```
 
 ## Configure a provider
 
@@ -107,7 +113,7 @@ App details:
 
 ## Data and storage
 
-Your API keys and settings are stored in the browser's localStorage. Conversations and original attachments are stored in IndexedDB. Local data is isolated by browser profile and origin. Sending messages, uploading attachments, and using speech features sends the relevant content to the configured API service.
+Your API keys and settings are stored in the browser's localStorage. Specifically, provider entries (including each provider's `apiKey`) are kept under `chat-demo:providers`; the active provider and per-provider model choices are in `chat-demo:active-provider` and `chat-demo:selected-models`. Conversations, attachment originals, and their metadata are stored in IndexedDB database `chat-demo` (`sessions`, `sessionSummaries`, `files`), and unsent drafts live in page memory only. Local data is isolated by browser profile and origin, so the `file://` copy, a locally served copy, and the GitHub Pages copy use separate storage. Use Settings → Data to export or delete it. Sending messages, uploading attachments, and using speech features sends the relevant content to the configured API service; this project has no server that receives your key or chats.
 
 History import/export in Settings uses ZIP archives. Importing replaces all local conversations and attachments after confirmation and validation. Exports include conversations and locally available original images, but exclude API keys, settings, and original non-image attachments. See the [history import/export documentation (Chinese)](src/services/chat/history/README.md).
 
@@ -124,6 +130,7 @@ Settings → Data → Delete all chats clears local conversations, original atta
 | `pnpm format` | Format with oxfmt |
 | `pnpm android` | Build the release APK |
 | `pnpm android:debug` | Build the debug APK |
+| `pnpm release:web` | Build the offline web ZIP |
 
 ```text
 src/

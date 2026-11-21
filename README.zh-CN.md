@@ -2,7 +2,7 @@
 
 一个静态聊天示例，现在支持**添加多个 API 平台与模型**，并可以打包成**安卓 App**。浏览器或 WebView 直接请求已配置的 API 服务，不需要应用后端。
 
-项目基于 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)。仍然可以直接打开 `dist/index.html`，或在安卓手机上安装 `release/AI-Chat-Demo-0.2.0.apk`。
+项目基于 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)。仍然可以直接打开 `dist/index.html`，或在安卓手机上安装 `release/AI-Chat-Demo-0.2.0.apk`。预构建的网页包和安卓安装包都放在 `release/`。
 
 ## 新增内容
 
@@ -45,7 +45,13 @@ pnpm dev
 pnpm build
 ```
 
-产物位于 `dist/`。直接打开 `dist/index.html` 时，存储和跨域能力取决于浏览器以及 API 平台是否允许该来源；安卓 WebView 版本已显式放开限制。
+产物位于 `dist/`。此外，[`release/AI-Chat-Demo-Web-0.2.0.zip`](release/AI-Chat-Demo-Web-0.2.0.zip) 是预构建的网页离线包：解压后直接打开 `index.html`，或用任意静态文件服务器托管该目录。直接打开 `index.html` 时，存储和跨域能力取决于浏览器以及 API 平台是否允许该来源；安卓 WebView 版本已显式放开限制。
+
+也可以自己重新生成离线包：
+
+```sh
+pnpm release:web
+```
 
 ## 配置平台
 
@@ -107,7 +113,7 @@ pnpm android:debug    # debug 变体，可用 chrome://inspect 调试
 
 ## 数据
 
-API Key 和设置保存在浏览器 localStorage，会话及附件原件保存在 IndexedDB，本地数据按浏览器用户配置和站点源隔离。发送对话、上传附件和使用语音功能时，相应内容会提交给配置的 API 服务。
+API Key 和设置保存在浏览器 localStorage：各平台配置（包含 `apiKey`）存放在 `chat-demo:providers`，当前平台和各平台选中的模型存放在 `chat-demo:active-provider`、`chat-demo:selected-models`。会话、附件原件及元数据保存在 IndexedDB 数据库 `chat-demo`（`sessions`、`sessionSummaries`、`files`），未发送的草稿只存在于页面内存中。本地数据按浏览器用户配置和站点源隔离，因此 `file://` 离线版、本地 HTTP 服务版和 GitHub Pages 版各自使用独立存储；可以在设置 → 数据管理中导出或删除。发送对话、上传附件和使用语音功能时，相应内容会提交给配置的 API 服务；本项目没有任何服务器会接收你的 Key 或聊天内容。
 
 设置中的历史导入导出使用 ZIP 格式。导入会在确认并校验成功后替换全部本地会话和附件；导出包含会话与本地可用的图片原件，不包含 API Key、设置或非图片附件原件。格式与保留范围见[历史导入导出](src/services/chat/history/README.md)。
 
@@ -124,6 +130,7 @@ API Key 和设置保存在浏览器 localStorage，会话及附件原件保存�
 | `pnpm format`       | oxfmt 格式化            |
 | `pnpm android`      | 构建 release APK        |
 | `pnpm android:debug`| 构建 debug APK          |
+| `pnpm release:web`  | 构建网页离线 ZIP 包     |
 
 ```text
 src/

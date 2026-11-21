@@ -12,7 +12,8 @@
     "lint": "oxlint src rspack.config.ts",
     "format": "oxfmt --write .",
     "android": "node scripts/android.mjs",
-    "android:debug": "node scripts/android.mjs --debug"
+    "android:debug": "node scripts/android.mjs --debug",
+    "release:web": "node scripts/build.mjs && node scripts/package-web.mjs"
   },
   "dependencies": {
     "@types/katex": "^0.16.5",
